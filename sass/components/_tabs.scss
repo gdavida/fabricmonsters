@@ -72,11 +72,12 @@
     }
   }
   .indicator {
-    position: absolute;
+    display: none;
+   /* position: absolute;
     bottom: 0;
     height: 2px;
     background-color: $tabs-underline-color;
-    will-change: left, right;
+    will-change: left, right;*/
   }
 }
 

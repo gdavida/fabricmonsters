@@ -1,3 +1,12 @@
+body {
+  background: url('../images/dotted-line.png');
+  background: linear-gradient(45deg, #b3dced 0%, #1b829b 50%, #bce0ee 100%);
+}
+
+h1 {
+  font-family: 'Gorditas', cursive;
+}
+
 .everything-wrapper {
   display: flex;
   flex-direction: row;
@@ -26,11 +35,17 @@
   border-radius: 15px;
   .icon-wrapper {
     display: flex;
-    align-items: flex-end;
     position: relative;
-    bottom: -50px;
-    width: 130px;
+    bottom: -60px;
+    width: auto;
     justify-content: space-between;
+    left: -42px;
+    .btn-large {
+      margin: 10px;
+      border: 1px dashed #bbdefb;
+      box-shadow: 0 0 0 3px #1565c0;
+
+    }
   }
 }
 
@@ -41,9 +56,27 @@
 
 .customize-section {
   display: flex;
-  flex-direction: row;
   width: 420px;
   align-items: center;
+  height: 400px;
+  padding-left: 0;
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    width: 15%;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+  }
+  .tab.col.s3 {
+    width: initial;
+    height: initial;
+    margin: 0;
+    background-color: #bbdefb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .label-item-wrapper {
@@ -58,11 +91,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 340px;
+  width: initial;
   .each-item {
-    width: 80px;
-    height: 80px;
+    width: 20%;
+    height: 20%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin: 5px;
+    img {
+    }
   }
 }
 
@@ -82,7 +120,40 @@
   display: none;
 }
 
+.image-wrapper img {
+  display: none;
+}
 
+// tabbed feature of items area
+.monsterBodiesAndPartsSection {
+  div {
+  display:flex;
+  justify-content: space-between;
+  }
+  #tabs-swipe-demo {
+    li a{
+      padding: 0 5px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 1px dashed #1565c0;
+        &.active {
+          background-color: white;
+        }
+      li:last-child a {
+        border-bottom: none !important;
+      }
+      p {
+        font-size: 10px;
+        line-height: initial;
+        margin-bottom: 0;
+        color: #0B95C0;
+      }
+    }
+  }
+}
 @media screen and (max-width: 899px) {
   .everything-wrapper {
   }
@@ -95,7 +166,7 @@
   .card-panel {
     width: 70%;
     .icon-wrapper {
-      width: 150px;
+      width: auto;
     }
   }
   .customize-section {
@@ -186,4 +257,51 @@
   width: 100%;
   margin-top: 40px;
 }
+
+
+@media screen and (max-width: 899px) {
+  .customize-section {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 91%;
+      margin-left: 3%;
+      margin-right: 3%;
+      margin-top: 40px;
+      height: 320px;
+      padding: 0;
+      /* margin: 0; */
+  }
+  .customize-section ul {
+      display: flex;
+      flex-direction: row;
+      height: 90px;
+      width: 100%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+      /* margin: 0; */
+  .customize-section .tab.col.s3 {
+      width: initial;
+      height: initial;
+      margin: 0;
+      background-color: #bbdefb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+  .monsterBodiesAndPartsSection #tabs-swipe-demo li a{
+      padding: 0 5px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-right: 1px dashed #1565c0;
+  }
+}
+
+
+
+
+/* CHECKBOX */
 
